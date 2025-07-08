@@ -49,7 +49,7 @@ const addNewBlog = async (req, res) => {
       req.body.blogImage = imagePath;
     }
     let blog = await Blog.create({...req.body});
-    return res.redirect("back");
+    return res.redirect("/blogs/view-blogs");
   } catch (error) {
     console.log(error);
   }
